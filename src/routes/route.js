@@ -34,23 +34,28 @@ const lodash=require('lodash')
 router.get('/test-me', function (req, res) {
     console.log(abc.welcome())
 
+
     console.log(xyz.printDate())
     console.log(xyz.printMonth())
     console.log(xyz.getBatchInfo())
+
 
     console.log(pqr.trimString())
     console.log(pqr.toLowerCase())
     console.log(pqr.toUpperCase())
 
     res.send('My first ever api!')
+    
 
     let arr=["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
     let result=lodash.chunk(arr,4)
     console.log("The sub array is:", result)
 
+
     let arr2=[1,3,5,7,9,11,13,15,17,19]
     let result2=lodash.tail(arr2)
     console.log(result2)
+
 
     let numArr1=[1,2,3,4,5]
     let numArr2=[4,5,6,7,8]
@@ -59,6 +64,7 @@ router.get('/test-me', function (req, res) {
     let numArr5=[13,14,15,16,17]
     let result3=lodash.union(numArr1,numArr2,numArr3,numArr4,numArr5)
     console.log(result3)
+
 
     let arr3=[["horror","The Shining"],["drama","Titanic"],["thriller","Shutter Island"],["fantasy","Pans Labyrinth"]]
     let result4=lodash.fromPairs(arr3)
