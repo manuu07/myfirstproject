@@ -1,15 +1,12 @@
-const AuthorModel= require("../models/authorModel")
+const authorModel=require('../models/authorModel')
 
-const createAuthor= async function (req, res) {
-    let author = req.body
-    let authorCreated = await AuthorModel.create(author)
-    res.send({data: authorCreated})
+
+//Write a POST api that creates a publisher from the details in the request body
+
+const createAuthor=async function(req,res){
+    let authorData=req.body
+    let authorCreated=await authorModel.create(authorData)
+    res.send({Author_Created:authorCreated})
 }
 
-const getAuthorsData= async function (req, res) {
-    let authors = await AuthorModel.find()
-    res.send({data: authors})
-}
-
-module.exports.createAuthor= createAuthor
-module.exports.getAuthorsData= getAuthorsData
+module.exports.createAuthor=createAuthor
