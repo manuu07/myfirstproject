@@ -1,46 +1,55 @@
-const UserModel= require("../models/userModel")
-
-
-
-
 const basicCode= async function(req, res) {
-    let tokenDataInHeaders= req.headers.token
-    console.log(tokenDataInHeaders)
-
-    console.log( "HEADER DATA ABOVE")
-    console.log( "hey man, congrats you have reached the Handler")
-    res.send({ msg: "This is coming from controller (handler)"})
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const createUser= async function (req, res) {
-    let data= req.body
-    let savedData= await UserModel.create(data)
-    res.send({msg: savedData})
+    res.send({msg:"Congrats you've reached the handler"})
 }
 
-const getUsersData= async function (req, res) {
-    let allUsers= await UserModel.find()
-    res.send({msg: allUsers})
+const basicCode2= async function(req, res) {
+    res.send({msg:"Congrats you've reached the handler 2"})
 }
 
-module.exports.createUser= createUser
-module.exports.getUsersData= getUsersData
-module.exports.basicCode= basicCode
+const basicCode3= async function(req, res) {
+    res.send({msg:"Congrats you've reached the handler 3"})
+}
+
+const basicCode4= async function(req, res) {
+    res.send({msg:"Congrats you've reached the handler 4"})
+}
+
+
+module.exports.basicCode=basicCode
+module.exports.basicCode2=basicCode2
+module.exports.basicCode3=basicCode3
+module.exports.basicCode4=basicCode4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const createUser= async function (req, res) {
+//     let data= req.body
+//     let savedData= await UserModel.create(data)
+//     res.send({msg: savedData})
+// }
+
+// const getUsersData= async function (req, res) {
+//     let allUsers= await UserModel.find()
+//     res.send({msg: allUsers})
+// }
+
+// module.exports.createUser= createUser
+// module.exports.getUsersData= getUsersData
+// module.exports.basicCode= basicCode

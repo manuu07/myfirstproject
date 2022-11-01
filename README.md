@@ -75,3 +75,28 @@ time , IP, Route should be printed on each line in terminal( every time an api i
 2010-08-19 14:00:00 , 123.459.898.734 , /createUser
 2010-08-19 14:00:00 , 123.459.898.734 , /basicAPi
 2010-08-19 14:00:00 , 123.459.898.734 , /falanaAPI
+
+
+
+
+
+
+
+
+// router.post("/createUser", UserController.createUser  )
+// router.get("/getUsersData", UserController.getUsersData)
+
+
+// const mid1= function ( req, res, next) {
+//     console.log("Hi I am a middleware named Mid1")
+//     // logic
+//     let loggedIn = false
+
+//     if (loggedIn== true) { 
+//         console.log( "OK LOGGED IS IS TRUE NOW")
+//         next ()
+//     }
+//     else {
+//         res.send ("Please login or register")
+//     }
+// }
